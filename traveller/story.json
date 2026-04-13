@@ -1,0 +1,69 @@
+{
+  "title": "旅者与公主",
+  "start": "ch_5",
+
+  "variables": {
+    "d_positive": 0,
+    "d_passion": 0,
+    "d_anchor": 0,
+    "d_innocence": 0,
+    "rel_traveller": 0,
+    "rel_princess": 0,
+    "item_coffee": 0,
+    "item_wreath": 0,
+    "item_recipe": 0,
+    "flag_cg_fortune": 0,
+    "flag_cg_stargazing": 0
+  },
+
+  "pages": [
+    {
+      "id": "ch_5",
+      "type": "normal",
+      "label": "旅者与公主",
+      "title": "第五节 · 莓果",
+      "paragraphs": [
+        "第二天清晨，他挎着篮子从林子里回来，手里捧着一把紫红色的莓果。",
+        "\u201c尝一个？\u201d他递到我嘴边。我从没见过这种果子，小小的，上面还有晨露。",
+        "\u201c这是做果酱的，\u201d他说，\u201c我走南闯北，就靠这些果子活着。\u201d"
+      ],
+      "choices": [
+        { "text": "\u201c你确定没毒吗？我们还是小心一点。\u201d", "effects": {"d_anchor": 1} },
+        { "text": "\u201c真好看……我从来没见过这种颜色。\u201d", "effects": {"d_innocence": 1} }
+      ],
+      "afterChoiceText": "我接过莓果，放到嘴边。",
+      "activities": [
+        { "component": "tarot", "label": "Play tarot cards" },
+        { "component": "constellation", "dataKey": "day01", "label": "Observe the stars" }
+      ],
+      "skipActivitiesLabel": "Skip games",
+      "next": "ch_6"
+    },
+    {
+      "id": "ch_6",
+      "type": "normal",
+      "label": "旅者与公主",
+      "title": "第六节 · 舞蹈",
+      "paragraphs": [
+        "蛋糕烤好了，他说要庆祝一下。\u201c庆祝什么？\u201d我问。\u201c庆祝下雨天、莓果、还有你开门。\u201d",
+        "他在林中空地上朝我伸出手。他拉着我的手，我们开始旋转。一圈，两圈，三圈。四周的景物都模糊了，只有他是清晰的。"
+      ],
+      "choices": [
+        { "text": "我被他带着转，有点头晕，但没松手。", "effects": {"d_innocence": 1} },
+        { "text": "我熟练地变换着脚步，带着他转得更快了。", "effects": {"d_passion": 1, "d_anchor": 1} }
+      ],
+      "afterChoiceText": "风在耳边呼啸，世界旋转着。",
+      "activities": [
+        { "component": "tarot", "label": "Play tarot cards" },
+        { "component": "constellation", "dataKey": "day02", "label": "Observe the stars" }
+      ],
+      "skipActivitiesLabel": "Skip games",
+      "next": "ch_end"
+    },
+    {
+      "id": "ch_end",
+      "type": "end",
+      "text": "结束"
+    }
+  ]
+}
